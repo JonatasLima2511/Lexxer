@@ -4,7 +4,7 @@ def lex(expression: str, position: int):
 
     i = position
     
-    char = getNaoVazio(i, expr)
+    char = getNaoVazio(i + 1, expr)
     charClass = getChar(char[1])
 
     if charClass == "LETRA":
@@ -12,7 +12,7 @@ def lex(expression: str, position: int):
 
         i = char[0]
 
-        char = getNaoVazio(i, expr)
+        char = getNaoVazio(i + 1, expr)
         charClass = getChar(char[1])
 
         while charClass == "LETRA" or charClass == "DÍGITO":
@@ -20,7 +20,7 @@ def lex(expression: str, position: int):
 
             i = char[0]
 
-            char = getNaoVazio(i, expr)
+            char = getNaoVazio(i + 1, expr)
             charClass = getChar(char[1])
 
         return [lexem, "IDENTIFICADOR", i]
@@ -30,7 +30,7 @@ def lex(expression: str, position: int):
 
         i = char[0]
 
-        char = getNaoVazio(i, expr)
+        char = getNaoVazio(i + 1, expr)
         charClass = getChar(char[1])
 
         while charClass == "DÍGITO":
@@ -39,7 +39,7 @@ def lex(expression: str, position: int):
 
             i = char[0]
 
-            char = getNaoVazio(i, expr)
+            char = getNaoVazio(i + 1, expr)
             charClass = getChar(char[1])
 
         return [lexem, "LITERALINTEIRO", i]
@@ -59,10 +59,7 @@ def lex(expression: str, position: int):
 
 def getNaoVazio(index:int , expression: str):
     
-    if index > 0:
-        position = index + 1
-    else:
-        position = index
+    position = index
     expr = expression
 
     try:
