@@ -4,7 +4,7 @@ def lex(expression: str, position: int):
 
     i = position
     
-    char = getNaoVazio(i + 1, expr)
+    char = getNaoVazio(i, expr)
     charClass = getChar(char[1])
 
     if charClass == "LETRA":
@@ -47,6 +47,8 @@ def lex(expression: str, position: int):
     elif charClass == "DESCONHECIDO":
         lexem = char[1]
 
+        i = char[0]
+
         token = verificaToken(lexem)
 
         return [lexem, token, i]
@@ -75,8 +77,7 @@ def getNaoVazio(index:int , expression: str):
 
 
 
-def getChar(character: str):
-    char = character
+def getChar(char: str):
     charClass = ""
 
     if char != "EOF":
