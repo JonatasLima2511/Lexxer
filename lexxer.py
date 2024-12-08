@@ -117,16 +117,3 @@ def verificaToken(token):
         tokenType = "OPDIVISÃO"
 
     return tokenType
-
-
-# Exemplo de uso
-expr = "(batata + pudim10)/3"
-
-p = 0
-lexema, token, position = lex(expr, p)
-
-while token != "FIMDEARQUIVO":
-    print (f"Lexema: {lexema}  Token: {token}")
-    p = position + 1
-    lexema, token, position = lex(expr, p)
-
