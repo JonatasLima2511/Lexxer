@@ -1,9 +1,15 @@
-# Analisador Léxico
+# Analisador Léxico/Sintático
 
-## Analisador léxico para operações matemáticas Referente ao trabalho proposto na disciplina de Paradigmas Computacionais e Linguagens de Programação
+## Analisador léxico/sintático para operações matemáticas Referente ao trabalho proposto na disciplina de Paradigmas Computacionais e Linguagens de Programação
 
-Este analisador verifica expressões matemáticas e imprime uma tabela com os lexemas e tokens, respectivamente
-
+**Autores:**
+<br><br>
+Jônatas Silva Lima (lexxer.py)
+<br>
+Jhonatan Teixeira Lôbo (parser.py)
+<br><br>
+O analisador léxico (lexxer) verifica expressões matemáticas e imprime uma tabela com os lexemas e tokens, respectivamente.
+<br><br>
 Este analisador aceita:
 
   - Identificadores
@@ -14,4 +20,11 @@ Este analisador aceita:
   - Multiplicação
   - Divisão
 
-Para verificar o funcionamento do analisador, basta escrever uma expressão na linha 122 seguindo os valores aceitos acima mencionados, e executar o arquivo.
+<br>
+O analisador sintático (parser) verifica se, sintáticamente, a expressão analisada está correta.
+<br><br>
+
+**Como usar:**
+
+
+Para verificar o funcionamento dos analisadores, basta escrever uma expressão na linha 6 do arquivo test.py, seguindo os valores aceitos acima mencionados e executar o arquivo.
